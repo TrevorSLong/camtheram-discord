@@ -1,0 +1,2 @@
+Cam the Ram invite link:
+https://discord.com/api/oauth2/authorize?client_id=876863853940592661&permissions=8&scope=applications.commands%20bot
