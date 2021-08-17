@@ -117,6 +117,16 @@ async def on_member_update(before, after):
 
         await channel.send(f'Member **{before.name}** has lost the role of **{newRole.name}**.')
 
+############# Delete all caps messages ##############################################################################
+@bot.event
+async def on_message(message):
+    if len([l for l in message.clean_content if l.isupper()]) > len([l for l in message.clean_content if l.islower()]):
+
+        await message.delete()
+        await message.channel.send(f"Hello {message.author}, you're message was deleted because you used excessive capital letters. Please resend using normal capitalization.")
+
+    await bot.process_commands(message)
+
 #############Adds server to json database on bot server join (working)##############################################################################
 @bot.event
 async def on_guild_join(guild):
