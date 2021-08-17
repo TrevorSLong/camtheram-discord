@@ -17,6 +17,14 @@ This is a Python Discord bot designed to help moderate and enhance Colorado Stat
 #### Join server message
    * Cam the Ram sends a message in the default channel when he joins the server for the first time introducing himself     <br />
 ![JoinMessage](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/joinmessage.PNG)
+#### Removes messages with excessive capital letters
+   * Cam the Ram will remove messages that are sent with more then 50% capital letters
+   * The author of the message and the admin channel will get an update explaining what happened.
+![ExcessiveCaps](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/capitals.PNG)
+#### Removes messages with swear words
+   * Cam the Ram will remove messages that are sent with a swear word inside
+   * The author of the message and the admin channel will get an update explaining what happened.
+![SwearWords](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/swearwords.PNG)
 # Slash Commands:
    * Slash commands were introduced to Discord 3/24/21, they much more user-friendly because they suggest and auto-fill based on whether the expected value is a string, user, channel, etc. Below is a list of all of the slash commands:
 ![SlashCommand](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/slashcommand.PNG)
