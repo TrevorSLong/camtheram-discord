@@ -44,3 +44,13 @@ The following are instructions for how Admins/Mods can create classes that are j
    * If it worked Zira will confirm and a reaction will show up on the message
 ![RRInstructions](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/ClassReactionRoleInstructions/11.PNG)
    * If everything worked, continue this process changing the `:emoji:` and the `@rolename` until you've made all the reactions you need.
+
+### Easy way to create channels
+   * Right click on the left bar (where all of the channels and catagories are)
+   * Click "Create Catagory"
+   * Title it what you want
+   * Click the "Private Catagory" slider to on
+   * Find the role that corresponds to the catagory (IE MECH200 role for MECH200 class/catagory)
+   * Click Save/Done
+   * Click the "+" next to the catagory to add channels to the catagory
+   * This will make it so that only the people with the role can see the catagory and the channels inside.
