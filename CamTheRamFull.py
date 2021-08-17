@@ -117,16 +117,6 @@ async def on_member_update(before, after):
 
         await channel.send(f'Member **{before.name}** has lost the role of **{newRole.name}**.')
 
-############# Delete all caps messages ##############################################################################
-@bot.event
-async def on_message(message):
-    if len([l for l in message.clean_content if l.isupper()]) > len([l for l in message.clean_content if l.islower()]):
-
-        await message.delete()
-        await message.channel.send(f"Hello {message.author}, you're message was deleted because you used excessive capital letters. Please resend using normal capitalization.")
-
-    await bot.process_commands(message)
-
 #############Adds server to json database on bot server join (working)##############################################################################
 @bot.event
 async def on_guild_join(guild):
@@ -231,12 +221,21 @@ async def on_member_remove(member):
     
     await channel.send(f'Cam the Ram successfully sent leave message about **{member.name}** leaving **{member.guild}**.')
 
-##############Responds to cam (working)###########################################################################################
+############## On Message Event ###########################################################################################
 @bot.event
 async def on_message(message):
-	if message.content == "cam":
-		await message.channel.send("Fight on you stalwart Ram Team,\nOn to the goal!\nTear the (Opponent’s) line asunder,\nAs down the field we thunder.\nKnights of the green and gold,\nFight on with all your might!\nFight on you stalwart Ram Team,\nFight! Fight! Fight!")
-	await bot.process_commands(message) # INCLUDES THE COMMANDS FOR THE BOT. WITHOUT THIS LINE, YOU CANNOT TRIGGER YOUR COMMANDS.
+
+############## Delete mostly capital message #############################
+    if len([l for l in message.clean_content if l.isupper()]) > len([l for l in message.clean_content if l.islower()]):
+
+        await message.delete()
+        await message.author.send(f"Hello **{message.author}**, the message you sent in **{message.guild}** was deleted because you used excessive capital letters. Please resend using normal capitalization.\nMessage:\n *`{message.clean_content}`*")
+
+############## Respond to "cam" #############################
+    if message.content == "cam":
+        await message.channel.send("Fight on you stalwart Ram Team,\nOn to the goal!\nTear the (Opponent’s) line asunder,\nAs down the field we thunder.\nKnights of the green and gold,\nFight on with all your might!\nFight on you stalwart Ram Team,\nFight! Fight! Fight!")
+
+    await bot.process_commands(message) # INCLUDES THE COMMANDS FOR THE BOT. WITHOUT THIS LINE, YOU CANNOT TRIGGER YOUR COMMANDS.
 
 ###########################################################################################################################
 #############################################Slash Commands (/)############################################################
