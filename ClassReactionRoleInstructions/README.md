@@ -2,7 +2,7 @@
 The following are instructions for how Admins/Mods can create classes that are joinable with Zira reaction roles. This can be done with other reaction role bots but Zira will be used for this tutorial.
 
 ### Enable developer mode:
-   * Click the settings icon on the bottom left of the Discord desktop app
+   * Click the settings icon on the bottom left of the Discord desktop app </br>
 ![RRInstructions](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/ClassReactionRoleInstructions/1.PNG)
    * Click "Advanced" then turn on developer mode.
 ![RRInstructions](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/ClassReactionRoleInstructions/2.PNG)
