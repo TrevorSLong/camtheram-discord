@@ -49,6 +49,11 @@ print("Using DBL Token " + dbl_token)
 bot = commands.Bot(command_prefix='$', intents=discord.Intents.all()) #declare intents for bot
 slash = SlashCommand(bot, sync_commands=True) #Declares command prefix
 
+with open('SwearWords.txt', 'r') as f:
+    global badwords  # You want to be able to access this throughout the code
+    words = f.read()
+    badwords = words.split()
+
 ###########################################################################################################################
 #############################################      TopGG       ############################################################
 ###########################################################################################################################
@@ -225,6 +230,8 @@ async def on_member_remove(member):
 @bot.event
 async def on_message(message):
 
+    if message.author == bot.user: return
+    if message.author.bot: return
 ############## Delete mostly capital message #############################
     if len([l for l in message.clean_content if l.isupper()]) > len([l for l in message.clean_content if l.islower()]):
 
@@ -242,6 +249,20 @@ async def on_message(message):
         await message.channel.send("Fight on you stalwart Ram Team,\nOn to the goal!\nTear the (Opponent’s) line asunder,\nAs down the field we thunder.\nKnights of the green and gold,\nFight on with all your might!\nFight on you stalwart Ram Team,\nFight! Fight! Fight!")
 
     await bot.process_commands(message) # INCLUDES THE COMMANDS FOR THE BOT. WITHOUT THIS LINE, YOU CANNOT TRIGGER YOUR COMMANDS.
+
+############## Delete swear word #############################
+    msg = message.content
+    for word in badwords:
+        if word in msg:
+            await message.delete()
+            await message.author.send(f"Hello **{message.author}**, the message you sent in **{message.guild}** was deleted because you used a swear word. Please resend using appropriate language if needed.\nMessage:\n *`{message.clean_content}`*")
+
+            with open("adminchannels.json", "r") as f:
+                guildInfo = json.load(f)
+            channel = bot.get_channel(guildInfo[str(message.guild.id)])
+    
+            await channel.send(f'Cam the Ram successfully deleted a message with a swear word in it sent by **{message.author}** \nMessage:\n*`{message.clean_content}`*\nIf this should not have been filtered out please contact Cam the Rams developers or open an issue on GitHub.')
+
 
 ###########################################################################################################################
 #############################################Slash Commands (/)############################################################
