@@ -4,43 +4,60 @@ This is a Python Discord bot designed to help moderate and enhance Colorado Stat
 # Bot events:
 #### Welcome message
    * Welcomes new members into the server by name with a random welcome message related to CSU.     <br />
+![WelcomeMessageImage](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/welcomemessages.PNG)
 #### Welcome DM
    * Welcomes new members into the server by sending them a DM     <br />
+![WelcomeDMImage](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/welcomedm.PNG)
 #### Chat response
    * Responds to "cam" with the CSU Fight Song     <br />
+![CamImage](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/cam.PNG)
 #### Changes bot status
    * Cam the Ram's status is "Watching MECH324 Lecture"     <br />
+![BotStatus](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/botstatus.PNG)
 #### Join server message
    * Cam the Ram sends a message in the default channel when he joins the server for the first time introducing himself     <br />
+![JoinMessage](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/joinmessage.PNG)
 # Slash Commands:
    * Slash commands were introduced to Discord 3/24/21, they much more user-friendly because they suggest and auto-fill based on whether the expected value is a string, user, channel, etc. Below is a list of all of the slash commands:
+![SlashCommand](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/slashcommand.PNG)
 #### Ping
    * Responds to `/ping` with "Pong" and the server latency
+![Ping](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/ping.PNG)
 #### UpdateChannel
    * Changed the channel Cam the Ram sends updates to (Welcome messages, leave messages, etc.)
    * Hitting tab will autofill the command and bring up a list of channels on your server. If it doesn't see the channel in the UI just type it out.
    * Note: command and result are using a different channel
+![UpdateChannel](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/updatechannel.PNG)
 #### AdminChannel
    * Changed the channel Cam the Ram sends admin updates to (Kicking, banning, temp banning, etc.)
    * Hitting tab will autofill the command and bring up a list of channels on your server. If it doesn't see the channel in the UI just type it out.
    * Note: command and result are using a different channel
+![AdminChannel](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/adminchannel.PNG)
 #### Announcements
    * Allows a user with `Manage Server` ability to send an announcement to any channel in the server. Both a message and channel to send to are required.
    * After typing the command hit TAB to autofill the message parameter, then type your message and hit tab. It will then open a list of channels to send the announcement to.
+![Announce1](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/announce1.PNG)
+![Announce2](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/announce2.PNG)
 #### Kick
    * `/kick member:` **@User** `reason:` **REQUIRED REASON, THE USER WILL SEE THIS REASON**
    * Kicks the user from the server, informs them of the reason. Also informs the admin channel that the person was kicked and the reason.
+![Kick1](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/kick1.PNG)
+![kick2](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/kick2.PNG)
 #### Ban
    * `/ban member:` **@User** `reason:` **REQUIRED REASON, THE USER WILL SEE THIS REASON**
    * Bans the user from the server, informs them of the reason. Also informs the admin channel that the person was kicked and the reason.
+![Ban](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/ban.PNG)
 #### TempBan
    * `/tempban member:` **@User** `reason:` **REQUIRED REASON, THE USER WILL SEE THIS REASON** duration: **How long in days**
    * Temporarily bans the user from the server, informs them of the reason. Also informs the admin channel that the person was kicked and the reason.
+![Announce2](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/tempban.PNG)
 #### UnBan
    * **Careful with the syntax here**
    * `/unban member1234: Username#1234`
    * This command will not autofill the user, you need to type the username and number
+![Unban](https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/unban.PNG)
 # Traditional ($) Commands:
+I won't include any screenshots here, but the commands are exactly the same as [Robo Rick](https://github.com/TrevorSLong/Robo-Rick) so go there and read that documentation if needed.
 #### Ping
    * Responds to $ping with "pong" and the bot server latency     <br />
 #### UpdateChannel
