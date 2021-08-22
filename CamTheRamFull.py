@@ -175,6 +175,18 @@ async def on_ready():
 @bot.event
 async def on_member_join(member):
 
+    for word in badwords:
+        if word in member.display_name:
+            nick = "CSU Ram"
+            await member.edit(nick = nick)
+            await member.send(f"Hello **{member}**, you joined **{member.guild}** with an unacceptable username. Your username was changed to `CSU Ram`. Please change your nickname to your name: **[please see here](https://support.discord.com/hc/en-us/articles/219070107-Server-Nicknames)**.")
+
+            with open("adminchannels.json", "r") as f:
+                guildInfo = json.load(f)
+            channel = bot.get_channel(guildInfo[str(member.guild.id)])
+    
+            await channel.send(f'Cam the Ram successfully changed **{member}**s nickname to `CSU Ram` because it contained bad language. If this was a mistake please report an issue on GitHub.')
+
 ###########Sends DM to member who joined############
     await member.create_dm()
     embed = discord.Embed(colour=discord.Colour(0x788dee), url="https://discordapp.com", description=f" Hello **{member.name}**! Welcome to {member.guild}! I'm Cam the Ram, a CSU inspired Discord management bot! I'm here to help manage Discord servers related to CSU!")
@@ -184,6 +196,7 @@ async def on_member_join(member):
 
     embed.add_field(name=f"Welcome to **{member.guild}**! ", value=f"Please read through the servers specific rules and agree to them to start chatting, keep in mind that the server you're joining is likely school related so there may be specific rules regarding off-topic or non-school related chatting.",inline=False)
     embed.add_field(name="A few notes:", value="• Type / or use ``$help`` to get a full list of my featues\n• This message is not editable by the server your joining, please be sure to read their rules and welcome page to make sure you aren't missing anything. ",inline=False)
+    embed.add_field(name="Important note:", value="• **Please change your server nickname to your real name**. If you don't know how to do that see [here](https://support.discord.com/hc/en-us/articles/219070107-Server-Nicknames).",inline=False)
     embed.add_field(name="Help support my growth", value="I was made by two full time students, if you enjoy having me around please consider **supporting my development** by contributing code to me [here](https://github.com/DroTron/CamTheRam-Discord) or **donating** to help fund development and hosting costs [here](https://www.paypal.com/donate?hosted_button_id=RBYUJ5M6QSB52)",inline=False)
 
     await member.dm_channel.send(embed=embed)
