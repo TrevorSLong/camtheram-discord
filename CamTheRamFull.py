@@ -208,11 +208,11 @@ async def on_member_join(member):
 
  
     welcomemessages = [
-        f'➡️ Welcome to **{member.guild}** **{member.name}**, hope you brought coffee!',
-        f'➡️ **{member.name}** just joined **{member.guild}**, maybe they know how to solve problem 13....',
-        f'➡️ The cake is a lie **{member.name}**. Dont fall for it. 🎂',
-        f'➡️ **{member.name}** just slid into the server.',
-        f'➡️ **{member.name}** finally made it, they must have had difficulty finding parking.',
+        f'➡️ Welcome to **{member.guild}** **{member.display_name}**, hope you brought coffee!',
+        f'➡️ **{member.display_name}** just joined **{member.guild}**, maybe they know how to solve problem 13....',
+        f'➡️ The cake is a lie **{member.display_name}**. Dont fall for it. 🎂',
+        f'➡️ **{member.display_name}** just slid into the server.',
+        f'➡️ **{member.display_name}** finally made it, they must have had difficulty finding parking.',
         ]
     randomwelcome = random.choice(welcomemessages)
     await channel.send(randomwelcome)
