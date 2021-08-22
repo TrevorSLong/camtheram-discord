@@ -265,8 +265,9 @@ async def on_message(message):
 
 ############## Delete swear word #############################
     msg = message.content
+    words = msg.split()
     for word in badwords:
-        if word in msg:
+        if word in words:
             await message.delete()
             await message.author.send(f"Hello **{message.author}**, the message you sent in **{message.guild}** was deleted because you used a swear word. Please resend using appropriate language if needed.\nMessage:\n *`{message.clean_content}`*")
 
