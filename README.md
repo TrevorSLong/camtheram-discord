@@ -1,6 +1,8 @@
 # Cam the Ram Discord Bot
 This is a Python Discord bot designed to help moderate and enhance Colorado State University related servers. This bot is in no way affiliated with Colorado State University. This bot is essentially a reskin of [Robo Rick](https://github.com/TrevorSLong/Robo-Rick) (another bot I created). If you would like to add Cam the Ram to your server click [here](https://discord.com/api/oauth2/authorize?client_id=876863853940592661&permissions=8&scope=applications.commands%20bot).
 
+[![Discord Bots](https://top.gg/api/widget/876863853940592661.svg)](https://top.gg/bot/876863853940592661)
+
 # Bot events:
 #### Welcome message
    * Welcomes new members into the server by name with a random welcome message related to CSU.     <br />
