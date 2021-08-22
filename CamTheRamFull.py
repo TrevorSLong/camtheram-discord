@@ -156,7 +156,7 @@ async def on_guild_join(guild):
     embed = discord.Embed(colour=discord.Colour(0x788dee), url="https://discordapp.com", description=f" Hello **{guild}**! Thanks for inviting me to help manage your server!")
 
     embed.set_thumbnail(url="https://raw.githubusercontent.com/TrevorSLong/camtheram-discord/main/Screenshots/CSU-Logo.png")
-    embed.set_author(name="Cam the Ram", url="https://top.gg/bot/827681932660965377", icon_url="https://raw.githubusercontent.com/TrevorSLong/camtheram-discord/main/Screenshots/CSU-Logo.png")
+    embed.set_author(name="Cam the Ram", url="https://top.gg/bot/876863853940592661", icon_url="https://raw.githubusercontent.com/TrevorSLong/camtheram-discord/main/Screenshots/CSU-Logo.png")
 
     embed.add_field(name="About me", value="Hi! I'm Cam the Ram, the CSU mascot in a Discord management bot! I'm here to help students manage CSU related Discord servers while adding a little bit of school spirit!",inline=False)
     embed.add_field(name="Basic commands:", value="• Type the command ``/updatechannel`` and follow the onscreen help to set the update/welcome channel (this is where welcome messages will be sent). \n• Or go to the channel you want updates and messages in and type the command ``$updatechannel``\n• Type the command ``/adminchannel`` and follow the onscreen help to set the admin update channel (this is where kicking, banning, and other admin announcements will be sent). \n• Or go to the channel you want admin updates in and type the command ``$adminchannel``\n• Typing / will show you all of the command other bots and I offer. \n• ``$help`` will give you the rundown of all of commands I have to offer (legacy non-slash commands)",inline=False)
@@ -192,7 +192,7 @@ async def on_member_join(member):
     embed = discord.Embed(colour=discord.Colour(0x788dee), url="https://discordapp.com", description=f" Hello **{member.name}**! Welcome to {member.guild}! I'm Cam the Ram, a CSU inspired Discord management bot! I'm here to help manage Discord servers related to CSU!")
 
     embed.set_thumbnail(url="https://raw.githubusercontent.com/TrevorSLong/camtheram-discord/main/Screenshots/CSU-Logo.png")
-    embed.set_author(name="Cam the Ram", url="https://top.gg/bot/827681932660965377", icon_url="https://raw.githubusercontent.com/TrevorSLong/camtheram-discord/main/Screenshots/CSU-Logo.png")
+    embed.set_author(name="Cam the Ram", url="https://top.gg/bot/876863853940592661", icon_url="https://raw.githubusercontent.com/TrevorSLong/camtheram-discord/main/Screenshots/CSU-Logo.png")
 
     embed.add_field(name=f"Welcome to **{member.guild}**! ", value=f"Please read through the servers specific rules and agree to them to start chatting, keep in mind that the server you're joining is likely school related so there may be specific rules regarding off-topic or non-school related chatting.",inline=False)
     embed.add_field(name="A few notes:", value="• Type / or use ``$help`` to get a full list of my featues\n• This message is not editable by the server your joining, please be sure to read their rules and welcome page to make sure you aren't missing anything. ",inline=False)
@@ -296,7 +296,7 @@ async def donate(ctx:SlashContext):
     embed = discord.Embed(colour=discord.Colour(0x788dee), url="https://discordapp.com", description=f" Hello **{ctx.author}**, Thank you for your interest in donating! Your donation will help with the cost of hosting and developing me for servers like **{ctx.guild}**!")
 
     embed.set_thumbnail(url="https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/DonateQRCode.png")
-    embed.set_author(name="Cam the Ram", url="https://top.gg/bot/827681932660965377", icon_url="https://raw.githubusercontent.com/TrevorSLong/camtheram-discord/main/Screenshots/CSU-Logo.png")
+    embed.set_author(name="Cam the Ram", url="https://top.gg/bot/876863853940592661", icon_url="https://raw.githubusercontent.com/TrevorSLong/camtheram-discord/main/Screenshots/CSU-Logo.png")
 
     embed.add_field(name="Help support my growth", value="I was made by two full time students, if you enjoy having me around please consider **supporting my development** by contributing code to me [here](https://github.com/TrevorSLong/CamTheRam-Discord) or **donating** to help fund development and hosting costs [here](https://www.paypal.com/donate?hosted_button_id=RBYUJ5M6QSB52)")
 
@@ -847,7 +847,7 @@ async def donate(ctx):
     embed = discord.Embed(colour=discord.Colour(0x788dee), url="https://discordapp.com", description=f" Hello **{ctx.message.author}**, Thank you for your interest in donating! Your donation will help with the cost of hosting and developing me for servers like **{ctx.message.guild}**!")
 
     embed.set_thumbnail(url="https://raw.githubusercontent.com/TrevorSLong/CamTheRam-Discord/main/Screenshots/DonateQRCode.png")
-    embed.set_author(name="Cam the Ram", url="https://top.gg/bot/827681932660965377", icon_url="https://raw.githubusercontent.com/TrevorSLong/camtheram-discord/main/Screenshots/CSU-Logo.png")
+    embed.set_author(name="Cam the Ram", url="https://top.gg/bot/876863853940592661", icon_url="https://raw.githubusercontent.com/TrevorSLong/camtheram-discord/main/Screenshots/CSU-Logo.png")
 
     embed.add_field(name="Help support my growth", value="I was made by two full time students, if you enjoy having me around please consider **supporting my development** by contributing code to me [here](https://github.com/DroTron/CamTheRam-Discord) or **donating** to help fund development and hosting costs [here](https://www.paypal.com/donate?hosted_button_id=RBYUJ5M6QSB52)")
 
